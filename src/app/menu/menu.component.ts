@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Categorie, Item, MenuService } from './menu.service';
+import { Categorie, Item } from './menu.models';
+import { MenuService } from './menu.service';
 
 @Component({
   selector: 'app-menu',
