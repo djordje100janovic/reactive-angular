@@ -1,0 +1,51 @@
+.menu-wrapp {
+    position: relative;
+    .menu {
+        width: 250px;
+        float: left;
+        button {
+            width: 100%;
+            padding: 5px 10px;
+            text-align: left;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    }
+    .selected {
+        width: calc(100% - 255px);
+        float: left;
+        position: relative;
+        h2 {
+            padding: 0;
+            font-size: 32px;
+            margin: 0 0 10px 10px;
+        }
+        .scroll {
+            height: 70vh;
+            overflow-y: auto;
+        }
+        .item {
+            padding: 10px;
+            border: 1px solid #eee;
+            margin: 5px;
+            background-color: #eee;
+            border-radius: 6px;
+            cursor: pointer;
+            &:hover {
+                background-color: #ddd;
+            }
+            h3 {
+                font-size: 20px;
+                margin: 10px 0 10px 0;
+            }
+            p {
+                color: #999;
+            }
+        }
+    }
+}

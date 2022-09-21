@@ -1,0 +1,89 @@
+{
+    "type": "Restaurant Menu",
+    "restaurant-info": {
+        "id": "121721",
+        "sponsored": "0",
+        "user-favourite": "",
+        "name": "",
+        "address": "",
+        "rating": "0.00",
+        "minimum-order-price": "",
+        "delivery-fee": "7",
+        "avg_delivery_time": "",
+        "logo": "",
+        "open-status": "1",
+        "default-ad": "",
+        "review-enabled": "1",
+        "social-share": "0",
+        "value": null,
+        "total-category": "9",
+        "site-url": "",
+        "location-img": "",
+        "restaurant-url": "",
+        "payment-methods": [],
+        "delivery-types": "0",
+        "tags": [],
+        "deliverable-area": [],
+        "ratings": [
+            {
+                "rating": ""
+            }
+        ],
+        "total-food-items": "35",
+        "facebook-like-link": "",
+        "description": "",
+        "restaurant-discount": {
+            "type": "",
+            "value": "0.00"
+        },
+        "restaurant-images": []
+    },
+    "restaurant-time-info": {
+        "sat": [
+            {
+                "open": "12:00:00",
+                "close": "22:30:00"
+            }
+        ],
+        "sun": [
+            {
+                "open": "12:00:00",
+                "close": "22:30:00"
+            }
+        ],
+        "mon": [
+            {
+                "open": "12:00:00",
+                "close": "22:30:00"
+            }
+        ],
+        "tue": [
+            {
+                "open": "12:00:00",
+                "close": "22:30:00"
+            }
+        ],
+        "wed": [
+            {
+                "open": "12:00:00",
+                "close": "22:30:00"
+            }
+        ],
+        "thu": [
+            {
+                "open": "12:00:00",
+                "close": "22:30:00"
+            }
+        ],
+        "fri": [
+            {
+                "open": "12:00:00",
+                "close": "22:30:00"
+            }
+        ]
+    },
+    "today": "Mon",
+    "working-hours-start": "12:00:00",
+    "working-hours-end": "22:30:00",
+    "deals": []
+}
