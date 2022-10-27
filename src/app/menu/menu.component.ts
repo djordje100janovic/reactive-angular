@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { combineLatest, Observable } from 'rxjs';
+import { map, tap, withLatestFrom } from 'rxjs/operators';
 import { Categorie, Item } from './menu.models';
 import { MenuService } from './menu.service';
 

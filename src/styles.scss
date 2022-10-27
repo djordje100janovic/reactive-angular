@@ -1,8 +1,14 @@
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 16px;
+  background-color: #d0e3ee;
 }
 
 .bg-trans {
-    transition: 0.1s background-color;
+  transition: 0.1s background-color;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
 }

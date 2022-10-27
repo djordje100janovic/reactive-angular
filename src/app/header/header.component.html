@@ -1,5 +1,14 @@
-<h1>Restaurant menu</h1>
-<nav>
-    <a routerLink="/" class="bg-trans">Home</a>
-    <a routerLink="/menu" routerLinkActive="active" class="bg-trans">Menu</a>
-</nav>
+<header>
+  <a routerLink="/" class="logo"><img src="assets/logo.png" /></a>
+  <h1>{{ title }}</h1>
+  <nav>
+      <a routerLink="/" class="bg-trans">
+          <fa-icon [icon]="iconHome"></fa-icon>
+          Home
+      </a>
+      <a routerLink="/menu" routerLinkActive="active" class="bg-trans">
+          <fa-icon [icon]="iconMenu"></fa-icon>
+          Menu
+      </a>
+  </nav>
+</header>

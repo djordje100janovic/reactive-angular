@@ -1,61 +1,115 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
 .menu-wrapp {
-  position: relative;
-
-  .menu {
-    width: 250px;
-    float: left;
-
-    button {
-      width: 100%;
-      padding: 5px 10px;
-      text-align: left;
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid #eee;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #eee;
-      }
-    }
-  }
-
-  .selected {
-    width: calc(100% - 255px);
-    float: left;
     position: relative;
+    .menu {
+        width: 250px;
+        float: left;
 
-    h2 {
-      padding: 0;
-      font-size: 32px;
-      margin: 0 0 10px 10px;
+        .menu-nav {
+            background-color: $blue;
+            border-radius: $borderRadius;
+        }
+
+        @include mobile {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+            height: auto;
+            .menu-nav {
+                position: relative;
+                height: 300px;
+                overflow-y: auto;
+                margin-top: 42px;
+                &.minimized {
+                    height: 0px;
+                }
+            }
+        }
+        button {
+            width: 100%;
+            padding: 8px 10px;
+            text-align: left;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            color: #fff;
+            font-family: $fontCursive;
+            font-size: 18px;
+            &:hover {
+                background-color: $active;
+            }
+            &.active {
+                background-color: $blueDark;
+            }
+        }
     }
-
-    .scroll {
-      height: 70vh;
-      overflow-y: auto;
+    .selected {
+        width: calc(100% - 255px);
+        float: left;
+        position: relative;
+        @include mobile {
+            width: 100%;
+        }
+        h2 {
+            padding: 0;
+            font-size: 38px;
+            margin: 0 0 20px 20px;
+        }
+        .items {
+            display: flex;
+            flex-flow: column wrap;
+            flex-direction: row;
+            margin-left: 3px;
+        }
+        .item {
+            padding: 10px;
+            border: 2px solid $blue;
+            margin: 5px;
+            background-color: rgb(247, 238, 189);
+            border-radius: 6px;
+            cursor: pointer;
+            width: 250px;
+            position: relative;
+            h3 {
+                font-size: 20px;
+                margin: 10px 40px 10px 0;
+            }
+            p {
+                color: rgb(141, 85, 33);
+            }
+            .price {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                z-index: 1;
+                padding: 5px;
+                background-color: $blue;
+                color: white;
+                border-radius: $borderRadius;
+            }
+            &:hover {
+                border: 2px solid $active;
+            }
+        }
     }
+}
 
-    .item {
-      padding: 10px;
-      border: 1px solid #eee;
-      margin: 5px;
-      background-color: #eee;
-      border-radius: 6px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #ddd;
-      }
-
-      h3 {
-        font-size: 20px;
-        margin: 10px 0 10px 0;
-      }
-
-      p {
-        color: #999;
-      }
+.menu-wrapp .menu button.btn-toggle-menu {
+    background-color: $active;
+    color: white;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 110px;
+    right: 15px;
+    top: 0;
+    border-radius: $borderRadius $borderRadius 0 0;
+    @include mobile {
+        display: block;
     }
-  }
 }

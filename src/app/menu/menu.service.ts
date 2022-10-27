@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { BehaviorSubject, Observable, Subject } from "rxjs";
 import { Categorie, Item } from "./menu.models";
+import { shareReplay, take, tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
