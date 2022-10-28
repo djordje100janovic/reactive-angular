@@ -1,19 +1,23 @@
 <div class="menu-wrapp">
   <div class="menu">
     <div class="menu-nav">
-      <button *ngFor="let categorie of categories" class="bg-trans" (click)="selectCategorie(categorie.id)">
-        {{ categorie.name }}
+      <button
+          *ngFor="let categorie of categories" class="bg-trans"
+          (click)="selectCategorie(categorie.id)">
+          {{ categorie.name }}
       </button>
     </div>
   </div>
   <div class="selected" *ngIf="selected">
     <h2>{{ selected.name }}</h2>
     <div class="items">
-        <div *ngFor="let item of selected.items" class="item bg-trans">
+        <div
+          *ngFor="let item of selected.items"
+          class="item bg-trans">
             <h3>{{ item.name }}</h3>
             <p>{{ item.description }}</p>
             <span class="price">{{ item.price }} $</span>
         </div>
     </div>
-</div>
+  </div>
 </div>
