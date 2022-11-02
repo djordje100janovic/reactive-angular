@@ -1,1 +1,7 @@
 <h1>Welcome</h1>
+<br/>
+<button type="button" class="btn" (click)="fetch()">Show categories</button>
+<p *ngIf="busy">Loading...</p>
+<br/>
+<p *ngIf="error" class="error">Ups, something went wrong.</p>
+<span *ngIf="categories$ | async"></span>

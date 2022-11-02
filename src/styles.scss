@@ -1,3 +1,6 @@
+@import "./app/styles/variables.scss";
+@import "./app/styles/mixins.scss";
+
 body {
   font-family: 'Patrick Hand', cursive;
   font-size: 16px;
@@ -11,4 +14,38 @@ body {
 .clearfix {
   float: none;
   clear: both;
+}
+
+.btn {
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  background-color: $blue;
+  border-radius: $borderRadius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blueDark;
+  }
+
+  &.active {
+    background-color: $active;
+    color: #fff;
+  }
+}
+
+.btn fa-icon {
+  margin-right: 3px;
+}
+
+.error {
+  padding: 5px;
+  color: white;
+  background-color: $active;
+  display: inline-block;
+  border-radius: $borderRadius;
 }

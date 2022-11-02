@@ -28,25 +28,4 @@ header h1 {
 
 nav {
     margin-left: auto;
-    a {
-        font-size: 17px;
-        text-transform: uppercase;
-        text-decoration: none;
-        margin-right: 5px;
-        padding: 10px;
-        color: #fff;
-        font-weight: bold;
-        background-color: $blue;
-        border-radius: $borderRadius;
-        &:hover {
-            background-color: $blueDark;
-        }
-        &.active {
-            background-color: $active;
-            color: #fff;
-        }
-    }
-    fa-icon {
-        margin-right: 3px;
-    }
 }
