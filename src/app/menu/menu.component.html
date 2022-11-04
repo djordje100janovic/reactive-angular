@@ -2,7 +2,7 @@
   <div class="menu">
     <div class="menu-nav">
       <button
-          *ngFor="let categorie of categories" class="bg-trans"
+          *ngFor="let categorie of categories" class="bg-anim"
           (click)="selectCategorie(categorie.id)">
           {{ categorie.name }}
       </button>
@@ -13,7 +13,7 @@
     <div class="items">
         <div
           *ngFor="let item of selected.items"
-          class="item bg-trans">
+          class="item bg-anim">
             <h3>{{ item.name }}</h3>
             <p>{{ item.description }}</p>
             <span class="price">{{ item.price }} $</span>
