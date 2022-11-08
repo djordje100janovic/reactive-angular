@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
-import { switchMap, tap } from 'rxjs/operators';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { of, Subject } from 'rxjs';
+import { switchMap, tap, catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent {
+export class HomeComponent  {
 
   busy: boolean = false;
   error: boolean = false;
@@ -17,7 +18,11 @@ export class HomeComponent {
 
   categories$ = this.fetch$.pipe(
     tap(() => this.busy = true),
-    switchMap((res) => this.http.get<any>('assets/categories.json')),
+    switchMap((res) =>
+        this.http.get<any>('assets/categoriess.json').pipe(
+          catchError((err, ) => of([]))
+        )
+    ),
     tap(() => this.busy = false)
   );
 

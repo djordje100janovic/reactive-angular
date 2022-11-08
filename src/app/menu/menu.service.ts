@@ -9,16 +9,16 @@ import { shareReplay, take, tap } from "rxjs/operators";
 })
 export class MenuService {
 
+  selected$: BehaviorSubject<string> = new BehaviorSubject("26576");
+  categories$: Observable<Categorie[]> = this.http.get<Categorie[]>("assets/categories.json").pipe(shareReplay());
+  items$: Observable<Item[]> = this.http.get<Item[]>("assets/menu.json").pipe(shareReplay());
+
   constructor(
     private http: HttpClient
   ) { }
 
-  getCategories(): Observable<Categorie[]> {
-    return this.http.get<Categorie[]>("assets/categories.json");
-  }
-
-  getItems(): Observable<Item[]> {
-    return this.http.get<Item[]>("assets/menu.json");
+  select(id: string): void {
+    this.selected$.next(id);
   }
 
 }

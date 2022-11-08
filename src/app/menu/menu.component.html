@@ -1,6 +1,8 @@
 <div class="menu-wrapp">
+
+
   <div class="menu">
-    <div class="menu-nav">
+    <div class="menu-nav" *ngIf="categories$ | async as categories">
       <button
           *ngFor="let categorie of categories" class="bg-anim"
           (click)="selectCategorie(categorie.id)">
@@ -8,7 +10,9 @@
       </button>
     </div>
   </div>
-  <div class="selected" *ngIf="selected">
+
+
+  <div class="selected" *ngIf="selected$ | async as selected">
     <h2>{{ selected.name }}</h2>
     <div class="items">
         <div
@@ -20,4 +24,5 @@
         </div>
     </div>
   </div>
+
 </div>
